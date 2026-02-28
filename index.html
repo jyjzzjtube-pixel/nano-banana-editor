@@ -129,7 +129,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--txt)
 
 <div class="api">
   <div class="dot" id="dot"></div>
-  <input class="api-in" id="apiKey" type="password" placeholder="Gemini API Key">
+  <input class="api-in" id="apiKey" type="password" placeholder="Gemini API Key" value="AIzaSyCt9Y8dI-i7sb0TjhM7Z9S3y7cnnGCejRc">
   <select class="m-sel" id="mdl">
     <option value="gemini-2.5-flash-preview-05-20">⚡ Flash</option>
     <option value="gemini-2.5-pro-preview-05-06">🧠 Pro</option>
@@ -598,6 +598,8 @@ document.onkeyup=e=>{
   if(e.key==='Shift')keyState['Shift']=false;
 };
 
+// 기본 API 키가 있으면 상태 표시등 초기화
+if($('apiKey').value.trim().length>10){$('dot').classList.add('on');}
 upBtn();
 </script>
 </body>
